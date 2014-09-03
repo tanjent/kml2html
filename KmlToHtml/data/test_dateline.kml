@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
+<Document>
+<name>Aelutians West</name>
+<Placemark id="kml_69">
+<name>kml_69</name>
+<Snippet> </Snippet>
+<description><![CDATA[<center><table><tr><th colspan='2' align='center'><em>Attributes</em></th></tr><tr bgcolor="#E3E3F3">
+<th>NAME</th>
+<td>Aleutians West</td>
+</tr><tr bgcolor="">
+<th>GEOID</th>
+<td>02016</td>
+</tr></table></center>]]></description>
+<MultiGeometry>
+<Polygon>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>178.380741,51.763907,0 178.372348,51.774146,0 178.335631,51.807031,0 178.33219,51.809037,0 178.319389,51.815737,0 178.310298,51.819993,0 178.305568,51.821748,0 178.236931,51.828209,0 178.246209,51.817078,0 178.304892,51.777434,0 178.308563,51.775701,0 178.318757,51.772322,0 178.335664,51.769926,0 178.339082,51.771529,0 178.36368,51.773948,0 178.367465,51.772758,0 178.380741,51.763907,0 </coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+<Polygon>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>-178.792409,51.746071,0 -178.776661,51.748612,0 -178.750414,51.757752,0 -178.733355,51.783947,0 -178.748283,51.809942,0 -178.767695,51.823179,0 -178.788541,51.832602,0 -178.811249,51.839018,0 -178.819459,51.839575,0 -178.828645,51.83615,0 -178.858248,51.820966,0 -178.870118,51.795261,0 -178.873024,51.782623,0 -178.815757,51.749176,0 -178.808157,51.747078,0 -178.792409,51.746071,0 </coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</MultiGeometry>
+</Placemark>
+</Document></kml>
