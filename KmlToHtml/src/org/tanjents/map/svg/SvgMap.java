@@ -2,6 +2,7 @@ package org.tanjents.map.svg;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.apache.batik.dom.svg.SVGDOMImplementation;
@@ -23,9 +24,15 @@ public class SvgMap {
 	private static final long STROKE_WIDTH = ((long)(COORD_FACTOR * 3) / 10000L); 
 	
 	SVGDocument doc;
+	ArrayList<SvgShape> shapeList;
+	
+	
+	public SvgMap() {
+		shapeList = new ArrayList<SvgShape>(); 
+	}
+	
 	
 	public void convert(State state) throws SvgMapException {
-	
 		try {
 			DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();
 			String svgNS = SVGDOMImplementation.SVG_NAMESPACE_URI;
