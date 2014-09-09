@@ -2,10 +2,10 @@ package org.tanjents.map;
 
 import org.tanjents.map.kml.KmlReader;
 import org.tanjents.map.kml.KmlReaderException;
-import org.tanjents.map.svg.SvgWriter;
-import org.tanjents.map.png.PngWriter;
+import org.tanjents.map.svg.SvgMap;
+import org.tanjents.map.svg.SvgMapException;
+import org.tanjents.map.png.PngConverter;
 import org.tanjents.map.png.PngWriterException;
-
 import org.apache.commons.lang3.exception.ExceptionUtils;
 
 public class KmlToHtml {
@@ -17,18 +17,23 @@ public class KmlToHtml {
 	public static void main(String[] args) {
 
 		KmlReader r;
-		SvgWriter w;
-		PngWriter p;
+		SvgMap sm;
+		PngConverter p;
 		
 		try {
 			r = new KmlReader(IN_KMLNAME);
 			
 			System.out.println(r.getState().getStateName());
 			
-			w = new SvgWriter(OUT_SVGNAME, r.getState()); 
-			p = new PngWriter(OUT_PNGNAME, w);
+			sm = new SvgMap();
+			sm.convert(r.getState());
+			sm.write(OUT_SVGNAME);
+			
+			p = new PngConverter(OUT_PNGNAME, sm);
 			
 		} catch (KmlReaderException e) {
+			System.out.println(ExceptionUtils.getStackTrace(e));
+		} catch (SvgMapException e) {
 			System.out.println(ExceptionUtils.getStackTrace(e));
 		} catch (PngWriterException e) {
 			System.out.println(ExceptionUtils.getStackTrace(e));

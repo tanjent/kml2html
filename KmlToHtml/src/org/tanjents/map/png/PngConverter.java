@@ -1,15 +1,15 @@
 package org.tanjents.map.png;
 
-import org.tanjents.map.svg.SvgWriter;
+import org.tanjents.map.svg.SvgMap;
 
-public class PngWriter {
+public class PngConverter {
 
 	String filename;
-	SvgWriter svg;
+	SvgMap svg;
 	
-	public PngWriter(String fname, SvgWriter svg) throws PngWriterException {
+	public PngConverter(String fname, SvgMap svgmap) throws PngWriterException {
 		setFilename(fname);
-		setSvg(svg);
+		setSvg(svgmap);
 		
 		
 		try {
@@ -25,7 +25,7 @@ public class PngWriter {
 		this.filename = s;
 	}
 	
-	private void setSvg(SvgWriter s) {
+	private void setSvg(SvgMap s) {
 		this.svg = s;
 	}
 }
